@@ -1,0 +1,128 @@
+*
+{    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color:white;
+    font-family: sans-serif;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: brown;
+    text-align: center;
+}
+header h1{
+    color: black;
+    border-bottom: 3px solid white;
+}
+ul li {    
+    list-style: none;
+}
+ul li a{
+    
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: grey;
+    border-bottom: 3px solid white;
+}
+section{
+    width: 800px;
+    height: 400px;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey;
+
+}
+section h1{
+    color: red;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 35px;
+
+}
+section .link-container, .format-container, .button-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 500px;
+}
+section .link-container label, .format-container label {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: seagreen;
+}
+section .link-container input, .format-container select{
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 2px solid blue;
+    font-size: 14px;
+}
+section .button-container button {
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    color:white;
+    background-color: red;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 850px){
+    section {
+        width: 500px;
+    }
+    section .link-container,
+    .format-container,
+    .button-container{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    section {
+        width: 350px;
+        height: 450px;
+        margin-top: 50px;
+    }
+    section .link-container,
+    .format-container,
+    .button-container{
+        width: 300px;
+    }
+}
+.text {
+margin-top: 500px;
+line-height: 50px;
+text-align: center ;
+font-size: large;
+}
+h1{
+    color: rgba(0, 17, 255, 0.986);
+}
+
+#footer {
+    color: #7b7c7b;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    max-width: 600px;
+    border-top: 1px #dadada solid;
+    margin: 40px auto;
+    padding: 5px 0;
+}

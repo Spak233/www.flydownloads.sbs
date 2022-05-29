@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+    <title>Youtube Video Downloader</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h1 class="title">Fly downloads</h1>
+        <ul> <li><a href="index.html">home</a> </li></ul>
+    </header>
+
+    <section>
+        <h1>Youtube Downloader</h1>
+        <div class="link-container">
+            <label for="">Video Link:</label>
+            <input type="text" class="link" name="link" placeholder="Enter video link" required>
+        </div>
+        <div class="format-container">
+            <label for="">format:</label>
+            <select class="format" required>
+                <option selected disabled>select video format</option>
+                <option value="mp3">mp3</option> 
+                <option value="mp4a">144</option>
+                <option value="360">360</option>
+                <option value="480">480</option>
+                <option value="720">720</option>
+                <option value="1080">1080</option>
+                <option value="4k">4k</option>
+                <option value="8k">8k</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <button class="btn" type="submit">start</button>
+
+        </div>
+    </section>
+    <script>
+        $(".btn").click(function(){
+            var link = $(".link").val();
+            var format = $(".format").children("option:selected").val();
+            var src = "" + link + "=" + format + "";
+            download(link, format);
+
+        });
+
+        function download(link, format){
+            $('.button-container').html('<iframe style="height:50px; border:none; overflow:hidden;" src="https://loader.to/api/button/?url='+ link + '&f=' + format + '"></iframe>');
+        }
+
+    </script>
+    <div class="text">
+        <h1>HOW TO USE THIS WEBSITE FOR FREE</h1>
+        <p> download a file from this site, <br>
+            1. first copy the link of your favorate youtube video <br>
+            2. Past the link in the provided space <br>
+            3. Click on start. <br>
+            4. click on  download button and wait for file download. <br>
+            thank you for using our site.Please come back again.</p><br>
+            
+    </div>
+<div id="footer">
+    <div class="support-email">gideonb919@gmail.com</div>
+</div>
+</body>   
+</html>
